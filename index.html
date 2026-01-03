@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Portofolio Saya</h1>
+    <p>Web Developer | Front End Developer & Desaigner</p>
+
+    <nav>
+        <a href="#profil">Profil</a>
+        <a href="#project">Project</a>
+        <a href="#media">Media</a>
+        <a href="#kontak">Kontak</a>
+
+        <button id="darkToggle">🌙</button>
+    </nav>
+</header>
+
+<!-- PROFIL -->
+<section class="profile fade-up" id="profil">
+    <img src="profil.jpeg" alt="Foto Profil">
+    <h2>Ikhsan Ibnu Mudzaky</h2>
+    <p>Saya adalah Mahasiswa semester 1 prodi sistem informasi universitas pamulang .</p>
+
+
+<!-- GLASS CONTACT CARD -->
+    <div class="glass-contact">
+        <div class="contact-item">
+            <span>📧</span>
+            <span>ihsanmuzaki3@gmail.com</span>
+        </div>
+        <div class="contact-item">
+            <span>📱</span>
+            <span>087882261131</span>
+        </div>
+        <div class="contact-item">
+            <span>📍</span>
+            <span>Pamulang, Indonesia</span>
+        </div>
+        <div class="contact-item">
+            <span>🌐</span>
+            <span>github.com/username</span>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECT -->
+ <section class="projects fade-up" id="project">
+    <h2 class="section-title">Project</h2>
+<div class="project-grid">
+    <div class="project-card">
+        <img src="de4bfc25-6bc6-49db-abb3-ba15621aa4b8.png" alt="Project 1">
+        <div class="mockup e commerc saya pribadi">
+            <h3>Mockup E commerc Saya Pribadi</h3>
+            <p>Desain modern & responsive</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="mockup login page.jpeg" alt="Project 2">
+        <div class="project-info">
+            <h3>Mockup Login Page</h3>
+            <p>HTML, CSS, JavaScript</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="Screenshot (46).png" alt="Project 3">
+        <div class="project-info">
+            <h3>Sistem Login E learning</h3>
+            <p>UI clean & conversion focused</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <img src="Screenshot (57).png" alt="Project 4">
+        <div class="project-info">
+            <h3>ERD digital</h3>
+            <p>Data visualization sederhana</p>
+        </div>
+    </div>
+</div>
+
+<!-- MEDIA -->
+<section class="media fade-up" id="media">
+    <h2>Media</h2>
+
+    <div class="media-box">
+        <h3>Video</h3>
+        <video controls>
+            <source src="koding.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="media-box">
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="mcr.mpeg" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- DOKUMEN -->
+    <div class="media-box">
+        <h3>Dokumen</h3>
+
+        <div class="document-list">
+            <a href="media/CV.pdf" target="_blank" class="document-item">
+                📄 CV - Dokumen Ikhsan
+            </a>
+        </div>
+    </div>
+</section>
+</section>
+
+<!-- KONTAK -->
+<section class="contact fade-up" id="kontak">
+    <h2>Hubungi Saya</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Nama">
+        <input type="email" id="email" placeholder="Email">
+        <textarea id="message" placeholder="Pesan"></textarea>
+        <button type="submit">Kirim</button>
+    </form>
+    <p id="infoKontak"></p>
+</section>
+
+<footer>
+    <p>© 2026 Portofolio Saya</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

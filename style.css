@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f6f8;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #1e1e2f;
+    color: #fff;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #6c63ff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* SECTION */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* PROFIL */
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #1e1e2f, #6c63ff);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* PROJECT */
+.projects h2,
+.media h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+}
+
+.project-grid img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.project-grid img:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* MEDIA */
+.media-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+video, audio {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+/* KONTAK */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    padding: 10px;
+    border: none;
+    background: #1e1e2f;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #333;
+}
+
+#infoKontak {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #1e1e2f;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ANIMASI SCROLL */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TOGGLE BUTTON */
+#darkToggle {
+    margin-left: 20px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* TRANSISI HALUS */
+body, header, section, footer {
+    transition: background 0.4s, color 0.4s;
+}
+
+/* GLASS CONTACT */
+.glass-contact {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Hover halus */
+.contact-item:hover {
+    transform: translateX(5px);
+    transition: 0.3s ease;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #121212;
+    color: #eaeaea;
+}
+
+body.dark header,
+body.dark footer {
+    background: #181818;
+}
+
+body.dark nav a {
+    color: #eaeaea;
+}
+
+body.dark .profile p {
+    color: #ccc;
+}
+
+body.dark .contact input,
+body.dark .contact textarea {
+    background: #1f1f1f;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+body.dark .project-grid img {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+body.dark #darkToggle {
+    background: #333;
+    color: #fff;
+}
